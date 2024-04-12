@@ -1,0 +1,148 @@
+{
+	"env": {
+		"production": {
+			"presets": [
+				[
+					"@babel/preset-env",
+					{
+						"loose": true,
+						"modules": false
+					}
+				],
+				"@babel/preset-react"
+			],
+			"plugins": [
+				[
+					"@babel/plugin-transform-runtime",
+					{
+						"corejs": false,
+						"helpers": true,
+						"regenerator": true,
+						"useESModules": false
+					}
+				],
+				[
+					"import",
+					{
+						"libraryName": "antd",
+						"libraryDirectory": "es",
+						"style": true
+					},
+					"ant"
+				],
+				[
+					"import",
+					{
+						"libraryName": "antd-mobile",
+						"style": true
+					},
+					"antd-mobile"
+				],
+				[
+					"@babel/plugin-proposal-decorators",
+					{
+						"legacy": true
+					}
+				],
+				"@babel/plugin-transform-react-inline-elements",
+				"@babel/plugin-transform-flow-strip-types",
+				"@babel/plugin-syntax-dynamic-import",
+				"@babel/plugin-syntax-import-meta",
+				"@babel/plugin-proposal-class-properties",
+				"@babel/plugin-proposal-json-strings",
+				"@babel/plugin-proposal-function-sent",
+				"@babel/plugin-proposal-export-namespace-from",
+				"@babel/plugin-proposal-numeric-separator",
+				"@babel/plugin-proposal-throw-expressions",
+				["@babel/plugin-transform-async-to-generator"]
+			]
+		},
+		"development": {
+			"presets": [
+				[
+					"@babel/preset-env",
+					{
+						"loose": true,
+						"modules": false
+					}
+				],
+				"@babel/preset-react"
+			],
+			"plugins": [
+				[
+					"@babel/plugin-transform-runtime",
+					{
+						"corejs": false,
+						"helpers": true,
+						"regenerator": true,
+						"useESModules": false
+					}
+				],
+				[
+					"import",
+					{
+						"libraryName": "antd",
+						"libraryDirectory": "es",
+						"style": true
+					},
+					"ant"
+				],
+				[
+					"import",
+					{
+						"libraryName": "antd-mobile",
+						"style": true
+					},
+					"antd-mobile"
+				],
+				[
+					"@babel/plugin-proposal-decorators",
+					{
+						"legacy": true
+					}
+				],
+				"@babel/plugin-proposal-class-properties",
+				"@babel/plugin-proposal-object-rest-spread",
+				"@babel/plugin-transform-flow-strip-types",
+				"@babel/plugin-syntax-dynamic-import",
+				["@babel/plugin-transform-async-to-generator"]
+			]
+		},
+		"test": {
+			"presets": [
+				[
+					"@babel/preset-env",
+					{
+						"loose": true,
+						"modules": false,
+						"targets": {
+							"node": "current"
+						}
+					}
+				],
+				"@babel/preset-react"
+			],
+			"plugins": [
+				"transform-es2015-modules-commonjs",
+				"@babel/plugin-proposal-class-properties",
+				"@babel/plugin-proposal-object-rest-spread",
+				[
+					"@babel/plugin-proposal-decorators",
+					{
+						"legacy": true
+					}
+				],
+				"@babel/plugin-transform-flow-strip-types",
+				"@babel/plugin-syntax-dynamic-import",
+				[
+					"import",
+					{
+						"libraryName": "antd",
+						"libraryDirectory": "es",
+						"style": true
+					}
+				]
+			]
+		}
+	}
+}
